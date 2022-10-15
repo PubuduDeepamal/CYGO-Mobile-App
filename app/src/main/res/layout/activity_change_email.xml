@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_change_email">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="15dp"
+          android:layout_margin="15dp"
+          android:id="@+id/RL_email">
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/lblTitle"
+             android:layout_marginTop="38dp"
+             android:text="Change Email (Please Enter your Password and Verify)"
+             android:textAlignment="center"
+             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+             android:fontFamily="@font/poppins_medium"/>
+
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/lblHeadE"
+                 android:layout_below="@+id/lblTitle"
+                 android:text="Current Email"
+                 android:layout_marginTop="30dp"
+                 android:padding="6dp"
+                 android:textColor="#555555"
+                 android:textSize="16sp"
+                 android:fontFamily="@font/poppins_regular"
+                 />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblEmail"
+                android:layout_below="@+id/lblHeadE"
+                android:background="@drawable/rounded_edittext"
+                android:padding="8dp"
+                android:textColor="#555555"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_regular"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblPass"
+                android:layout_below="@+id/lblEmail"
+                android:text="Password*"
+                android:layout_marginTop="5dp"
+                android:padding="6dp"
+                android:textColor="#555555"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_regular"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPassword"
+                android:layout_below="@id/lblPass"
+                android:hint="Enter Password"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:fontFamily="@font/poppins_regular"
+                android:foregroundTint="#1DE099"
+                android:textAlignment="textStart"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnAuth"
+                android:layout_below="@id/txtPassword"
+                android:text="Authenticate"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginLeft="70dp"
+                android:backgroundTint="#e6b400"
+                />
+
+         <ProgressBar
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/progressBar"
+             style="?android:attr/progressBarStyleLarge"
+             android:layout_centerVertical="true"
+             android:layout_centerHorizontal="true"
+             android:elevation="10dp"
+             android:visibility="gone"/>
+
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/RL_email"
+          android:padding="15dp"
+          android:id="@+id/RL_new"
+          android:layout_marginTop="0dp"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="15dp">
+
+         <TextView
+             android:id="@+id/lblAuth"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="70dp"
+             android:layout_marginTop="0dp"
+             android:layout_marginRight="70dp"
+             android:fontFamily="@font/poppins_regular"
+             android:padding="6dp"
+             android:text="Not Authenticated"
+             android:textAlignment="center"
+             android:textColor="#555555"
+             android:textSize="16sp" />
+
+         <EditText
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/txtNewEmail"
+             android:layout_below="@id/lblAuth"
+             android:layout_marginTop="15dp"
+             android:hint="Enter New Email"
+             android:inputType="textEmailAddress"
+             android:padding="8dp"
+             android:textSize="16sp"
+             android:background="@drawable/rounded_edittext"
+             android:ems="10"
+             android:fontFamily="@font/poppins_regular"
+             android:foregroundTint="#1DE099"
+             android:textAlignment="textStart"
+             />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnChange"
+                android:layout_below="@id/txtNewEmail"
+                android:text="Change"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginLeft="70dp"
+                android:backgroundTint="#e6b400"
+                />
+
+         <Button
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/btnBack"
+             android:layout_below="@id/btnChange"
+             android:text="Back"
+             android:layout_marginTop="55dp"
+             android:layout_marginRight="30dp"
+             android:layout_marginLeft="30dp"
+             android:backgroundTint="@color/primary_color"
+             />
+
+      </RelativeLayout>
+
+   </RelativeLayout>
+
+   </LinearLayout>
+
+</ScrollView>
